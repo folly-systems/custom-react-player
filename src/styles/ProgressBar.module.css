@@ -1,0 +1,47 @@
+/*
+ Copyright (c) Folly Systems.
+
+ This source code is licensed under the MIT license found in the
+ LICENSE file in the root directory of this source tree.
+*/
+
+.slider {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(248, 248, 250, 0.3);
+}
+
+.sliderProgressBar {
+  height: 100%;
+  background-color: rgb(75, 111, 210);
+  pointer-events: none;
+  position: absolute;
+}
+
+.bufferProgressBar {
+  height: 100%;
+  background-color: white;
+  pointer-events: none;
+  position: absolute;
+}
+
+.sliderHandle {
+  --size: 14px;
+  height: var(--size);
+  width: var(--size);
+  border: 2px solid #1a53db;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  cursor: pointer;
+  transform: translateY(calc(-50% + (var(--size) / 4)));
+  visibility: hidden;
+  transition: visibility 0.5s ease-out;
+}
+
+.slider:hover .sliderHandle {
+  visibility: visible;
+  transition: visibility 0.5s ease-out;
+}

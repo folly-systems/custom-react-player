@@ -1,0 +1,155 @@
+/*
+ Copyright (c) Folly Systems.
+
+ This source code is licensed under the MIT license found in the
+ LICENSE file in the root directory of this source tree.
+*/
+
+.videoContainer {
+  position: relative;
+}
+
+.videoContainer__videoComponent {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoContainer__videoComponent--rounded {
+  border-radius: 4px;
+}
+
+.videoContainer__bufferSpinner {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  top: 0;
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoContainer__controlShadow {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 15%;
+  pointer-events: none;
+  box-shadow: inset 0 -37px 34px -13px #000000;
+}
+
+.videoContainer__controlShadow--rounded {
+  border-radius: 0 0 4px 4px;
+}
+
+.videoContainer__controls {
+  position: absolute;
+  bottom: 0;
+}
+
+.videoContainer__controlButton {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+}
+
+.videoContainer__controlButton--big {
+  margin: 10px auto;
+}
+
+.videoContainer__controlButton--small {
+  margin: 5px auto;
+}
+
+.videoContainer .controls__section--showOnHover {
+  transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+  opacity: 0;
+}
+
+.videoContainer:hover .controls__section--showOnHover {
+  opacity: 1;
+}
+
+.controlSection {
+  min-width: 50%;
+  display: flex;
+}
+
+.controlSectionOne {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.controlSectionTwo {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.playerIcon {
+  min-width: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.playerIcon:hover {
+  background: #1f263b;
+  opacity: 0.85;
+  border-radius: 2px;
+}
+
+.playerIcon--left {
+  margin-right: 20px;
+  margin-left: 0;
+}
+
+.playerIcon--right {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.timeSection {
+  color: white;
+  user-select: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.controlSection__speed {
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  width: 32px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.videoContainer__videoLoadingOverlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container {
+  height: 8px;
+  width: 95%;
+  margin: auto;
+}
+
+.controls__section--showOnHover {
+  transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+  opacity: 0;
+}
+
+.controls__section--showOnHover:hover {
+  opacity: 1;
+}

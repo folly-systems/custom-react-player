@@ -1,0 +1,9 @@
+# Folders to ignore
+node_modules
+dist
+example/src/component
+
+# Config files
+rollup.config.js
+.eslintrc.js
+modules.d.ts
