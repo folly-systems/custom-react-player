@@ -1,0 +1,3 @@
+[submodule "example"]
+	path = example
+	url = https://github.com/folly-systems/custom-react-player-example-app
