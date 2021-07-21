@@ -377,7 +377,7 @@ export const CustomVideoPlayer: React.FunctionComponent<CustomVideoPlayerProps> 
             <div>
               <div
                 className={`${styles.videoContainer__controlShadow} ${
-                  isPlaying ? styles['controls__section--showOnHover '] : ''
+                  isPlaying ? styles['controls__section--showOnHover'] : ''
                 } ${
                   rounded
                     ? styles['videoContainer__controlShadow--rounded']
