@@ -195,9 +195,6 @@ export const CustomVideoPlayer: React.FunctionComponent<CustomVideoPlayerProps> 
             VideoPlayerEvents.Progress,
             showVideoBufferProgress,
           );
-          videoRef.current.playbackRate =
-            playing?.speed || PlaybackSpeeds['1x'];
-          videoRef.current.currentTime = playing?.time || 0;
 
           // Autoplay video
           if (playing?.status) {
@@ -239,7 +236,7 @@ export const CustomVideoPlayer: React.FunctionComponent<CustomVideoPlayerProps> 
         { once: true },
       );
 
-      // Cleanup all the event listeners on unmount
+      // Cleanup all the event listeners on un-mount
       return () => {
         currentVideo.removeEventListener(
           VideoPlayerEvents.Timeupdate,
@@ -262,7 +259,7 @@ export const CustomVideoPlayer: React.FunctionComponent<CustomVideoPlayerProps> 
           showVideoBufferProgress,
         );
       };
-    }, []);
+    }, [url]);
 
     useEffect(() => {
       let playVideo;
@@ -284,7 +281,7 @@ export const CustomVideoPlayer: React.FunctionComponent<CustomVideoPlayerProps> 
       videoRef.current.playbackRate = speed;
       setPlaybackSpeed(speed);
       setIsPlaying(playVideo);
-    }, [playing]);
+    }, [playing, url]);
 
     /**
      * Play video if the video is paused
@@ -377,7 +374,7 @@ export const CustomVideoPlayer: React.FunctionComponent<CustomVideoPlayerProps> 
             <div>
               <div
                 className={`${styles.videoContainer__controlShadow} ${
-                  isPlaying ? styles['controls__section--showOnHover '] : ''
+                  isPlaying ? styles['controls__section--showOnHover'] : ''
                 } ${
                   rounded
                     ? styles['videoContainer__controlShadow--rounded']

@@ -15,27 +15,27 @@ export interface CustomVideoPlayerProps {
   playing?: {
     status: boolean;
     time: number;
-    speed?: PlaybackSpeeds;
+    speed: PlaybackSpeeds;
   };
   controls?: {
-    fullscreen: {
+    fullscreen?: {
       show?: boolean;
       icon?: JSX.Element;
     };
-    playPause: {
+    playPause?: {
       show?: boolean;
       playIcon?: JSX.Element;
       pauseIcon?: JSX.Element;
     };
-    playbackSpeed: {
+    playbackSpeed?: {
       show?: boolean;
       color?: string;
     };
-    volume: {
+    volume?: {
       show?: boolean;
       icon?: JSX.Element;
     };
-    time: {
+    time?: {
       show?: boolean;
       color?: string;
     };
