@@ -93,6 +93,7 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
+  outline: none;
 }
 
 .playerIcon:hover {
@@ -114,6 +115,8 @@
 .timeSection {
   color: white;
   user-select: none;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none;
   font-family: 'Open Sans', sans-serif;
 }
 

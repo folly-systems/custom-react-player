@@ -155,7 +155,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 
       <div
         className={styles.sliderHandle}
-        style={{ left: `${progressPercentage}%` }}
+        style={{ left: `${progressPercentage - 1}%` }}
         onClick={(ev) => {
           // On click of handle do nothing
           // stopPropagation is added here to avoid bubbling of this event and triggering parent elements click event
