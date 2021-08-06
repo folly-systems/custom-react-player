@@ -11,6 +11,7 @@
   width: 100%;
   height: 4px;
   background-color: rgba(248, 248, 250, 0.3);
+  outline: none;
 }
 
 .sliderProgressBar {
@@ -36,7 +37,7 @@
   background: white;
   position: absolute;
   cursor: pointer;
-  transform: translateY(calc(-50% + (var(--size) / 4)));
+  transform: translateY(calc(-50% + 2px));
   visibility: hidden;
   transition: visibility 0.5s ease-out;
 }
