@@ -32,6 +32,7 @@ export const CustomVideoPlayer: React.FunctionComponent<CustomVideoPlayerProps> 
     playerType,
     getVideoProgressDetails,
     onVideoProgress,
+    isVideoPlayableWithoutOptions = true,
   }) => {
     const videoRef: any = useRef<HTMLVideoElement>(null);
     const [bufferProgress, setBufferProgress] = useState<number>(0);
@@ -357,7 +358,9 @@ export const CustomVideoPlayer: React.FunctionComponent<CustomVideoPlayerProps> 
             className={`${styles.videoContainer__videoComponent} ${
               rounded ? styles['videoContainer__videoComponent--rounded'] : ''
             }`}
-            onClick={handleVideoPlayPause}
+            onClick={
+              isVideoPlayableWithoutOptions ? handleVideoPlayPause : () => {}
+            }
             ref={videoRef}
             src={url}
             style={videoContainerStyle}>

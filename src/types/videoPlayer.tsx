@@ -42,6 +42,7 @@ export interface CustomVideoPlayerProps {
   };
   rounded?: boolean;
   playerType?: 'big' | 'small';
+  isVideoPlayableWithoutOptions?: boolean;
 }
 
 export enum PlaybackSpeeds {
